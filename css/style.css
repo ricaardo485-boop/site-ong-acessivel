@@ -1,0 +1,35 @@
+/* PROJETO ONG - EXPERIÊNCIA PRÁTICA II - style.css completo até agora */
+:root {
+  --cor-primaria: #1A5D8A;
+  --cor-primaria-clara: #2E86C1;
+  --cor-secundaria: #F39C12;
+  --cor-acento: #27AE60;
+  --cor-neutra-900: #1C1C1E;
+  --cor-neutra-600: #5A5A5A;
+  --cor-neutra-200: #E5E5E7;
+  --cor-neutra-100: #F9F9FB;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.5rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --ff-titulo: 'Poppins', sans-serif;
+  --ff-corpo: 'Inter', sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--ff-corpo); font-size: var(--fs-body); color: var(--cor-neutra-900); background: var(--cor-neutra-100); line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-sm); }
+.grid-12 { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-md); }
+.col-12 { grid-column: span 12; } .col-6 { grid-column: span 6; } .col-4 { grid-column: span 4; } .col-3 { grid-column: span 3; }
+
+@media (max-width: 320px) { .grid-12 { grid-template-columns: 1fr; } .col-12, .col-6, .col-4, .col-3 { grid-column: span 12; } }
+@media (min-width: 576px) { .grid-12 { grid-template-columns: repeat(6, 1fr); } .col-4, .col-3 { grid-column: span 3; } }
+@media (min-width: 768px) { .grid-12 { grid-template-columns: repeat(12, 1fr); } .col-6 { grid-column: span 6; } }
+@media (min-width: 1024px) { .container { padding: 0 var(--space-lg); } .grid-12 { gap: var(--space-lg); } }
+@media (min-width: 1440px) { .container { max-width: 1400px; } .grid-12 { gap: var(--space-xl); } }
